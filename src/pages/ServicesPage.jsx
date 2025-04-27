@@ -13,7 +13,7 @@ const serviceCategories = [
       {
         id: 1,
         title: 'Verniz de Gel',
-        description: '',
+        description: 'Unhas com um acabamento brilhante e um toque profissional! Inclui cutilagem, preparação da unha, aplicação da cor à tua escolha e finalização com top coat. Perfeito para quem gosta de unhas simples e bem cuidadas.',
         price: '10€',
         duration: '+- 1h',
         popular: false,
@@ -21,7 +21,7 @@ const serviceCategories = [
       {
         id: 2,
         title: 'Aplicação de Gel',
-        description: '',
+        description: 'Transforma as tuas unhas com gel! Inclui cutilagem, preparação da unha, alongamento (se quiseres), construção em gel, aplicação da cor à tua escolha e finalização com top coat. Um resultado bonito, elegante e com aquele toque profissional que faz toda a diferença.',
         price: '20€',
         duration: '+- 2h',
         popular: true,
@@ -29,7 +29,7 @@ const serviceCategories = [
       {
         id: 3,
         title: 'Manutenção de Gel',
-        description: '',
+        description: 'Mantém as tuas unhas sempre bonitas e bem cuidadas! A manutenção inclui remoção do excesso de gel, ajuste do formato, cutilagem, nova aplicação de gel, cor à tua escolha e finalização com top coat.',
         price: '15€',
         duration: '+- 2h',
         popular: false,
@@ -44,7 +44,7 @@ const serviceCategories = [
       {
         id: 5,
         title: 'Verniz de Gel',
-        description: '',
+        description: 'Deixa os teus pés ainda mais bonitos com um acabamento brilhante e impecável! Inclui cutilagem, preparação das unhas, aplicação do verniz de gel na cor que escolheres e finalização com top coat. Perfeito para quem quer pés bem cuidados e com um toque de elegância.',
         price: '10€',
         duration: '1h',
         popular: false,
