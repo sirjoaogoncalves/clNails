@@ -221,13 +221,13 @@ const ServicesPage = () => {
                   <h3 className="font-semibold text-lg mb-3 text-primary-600">Nota sobre Preços</h3>
                   <p className="text-gray-700">
                     Os preços mantêm-se fixos, independentemente:
-
-                    do formato ou tamanho da unha;
-
-                    da aplicação de extensão;
-
-                    da inclusão (ou não) de nail art.
-
+                   <br/> 
+                    Do formato ou tamanho da unha.
+                   <br/>
+                    Da aplicação de extensão.
+                   <br/>
+                    Da inclusão (ou não) de nail art.
+                   <br/>
                     Não há variação de custo consoante as opções mencionadas.
                   </p>
                 </motion.div>

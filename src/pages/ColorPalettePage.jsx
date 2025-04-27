@@ -7,86 +7,374 @@ import { Palette, Sparkles, Info } from 'lucide-react';
 const colorData = [
   {
     id: 1,
-    name: 'Vermelho Clássico',
-    hex: '#E63946',
+    number: 2,
+    name: 'branco',
+    hex: '#FFFFFF',
   },
   {
     id: 2,
-    name: 'Rosa Bebé',
-    hex: '#FFC4D6',
-  },
-  {
-    id: 3,
-    name: 'Nude',
-    hex: '#E6BEAE',
-  },
-  {
-    id: 4,
-    name: 'Borgonha',
-    hex: '#800020',
-  },
-  {
-    id: 5,
-    name: 'Branco Pérola',
+    number: 1,
+    name: 'branco leitoso',
     hex: '#F5F5F5',
   },
   {
+    id: 3,
+    number: 54,
+    name: 'rosa pastel',
+    hex: '#ffeef2',
+  },
+  {
+    id: 4,
+    number: 51,
+    name: 'amarelo pastel',
+    hex: '#FDFD96',
+  },
+  {
+    id: 5,
+    number: 53,
+    name: 'amarelo',
+    hex: '#fdfd8e',
+  },
+  {
     id: 6,
-    name: 'Preto',
-    hex: '#1A1A1A',
+    number: 4,
+    name: 'bege claro',
+    hex: '#F5F0DC',
   },
   {
     id: 7,
-    name: 'Azul Marinho',
-    hex: '#003366',
+    number: 26,
+    name: 'azul transparente',
+    hex: '#e0f2f6',
   },
   {
     id: 8,
-    name: 'Coral',
-    hex: '#FF7F50',
+    number: 58,
+    name: 'azul pastel',
+    hex: '#cdf7f5',
   },
   {
     id: 9,
-    name: 'Roxo',
-    hex: '#800080',
+    number: 33,
+    name: 'amarelo limão',
+    hex: '#FFFF45',
   },
   {
     id: 10,
-    name: 'Verde Esmeralda',
-    hex: '#2E8B57',
+    number: 35,
+    name: 'gliter prateado',
+    hex: '#E6E8FA',
   },
   {
     id: 11,
-    name: 'Dourado',
-    hex: '#D4AF37',
+    number: 3,
+    name: 'rosa leitoso',
+    hex: '#FFDBEB',
   },
   {
     id: 12,
-    name: 'Prata',
-    hex: '#C0C0C0',
+    number: 5,
+    name: 'bege creme',
+    hex: '#F3E5AB',
   },
   {
     id: 13,
-    name: 'Turquesa',
-    hex: '#40E0D0',
+    number: 57,
+    name: 'lilás pastel',
+    hex: '#FFD1DC',
   },
   {
     id: 14,
-    name: 'Lavanda',
-    hex: '#B57EDC',
+    number: 42,
+    name: 'rosa quartzo efeito areado',
+    hex: '#F7CAC9',
   },
   {
     id: 15,
-    name: 'Vinho',
-    hex: '#722F37',
+    number: 56,
+    name: 'verde água pastel',
+    hex: '#acf1ac',
   },
   {
     id: 16,
-    name: 'Cinza',
-    hex: '#808080',
+    number: 55,
+    name: 'verde pastel',
+    hex: '#cedf74',
+  },
+  {
+    id: 17,
+    number: 52,
+    name: 'amarelo alaranjado',
+    hex: '#FFbc62',
+  },
+  {
+    id: 18,
+    number: 6,
+    name: 'nude rosa',
+    hex: '#E8B8B1',
+  },
+  {
+    id: 19,
+    number: 7,
+    name: 'rosa claro',
+    hex: '#FFA9B8',
+  },
+  {
+    id: 20,
+    number: 23,
+    name: 'lavanda',
+    hex: '#eaa7ea',
+  },
+  {
+    id: 21,
+    number: 9,
+    name: 'nude pêssego',
+    hex: '#F6B380',
+  },
+  {
+    id: 22,
+    number: 34,
+    name: 'prateado brilhante',
+    hex: '#C0C0C0',
+  },
+  {
+    id: 23,
+    number: 32,
+    name: 'verde lima',
+    hex: '#75ff36',
+  },
+  {
+    id: 24,
+    number: 12,
+    name: 'cinza pérola',
+    hex: '#CCB4A7',
+  },
+  {
+    id: 25,
+    number: 31,
+    name: 'verde',
+    hex: '#53ff53',
+  },
+  {
+    id: 26,
+    number: 8,
+    name: 'nude rosa quente',
+    hex: '#E6A39A',
+  },
+  {
+    id: 27,
+    number: 24,
+    name: 'lilás suave',
+    hex: '#dd96dd',
+  },
+  {
+    id: 28,
+    number: 50,
+    name: 'salmão pastel',
+    hex: '#FF9295',
+  },
+  {
+    id: 29,
+    number: 27,
+    name: 'azul bebé',
+    hex: '#a4aed9',
+  },
+  {
+    id: 30,
+    number: 49,
+    name: 'nude rosa acizentado',
+    hex: '#C8AD7F',
+  },
+  {
+    id: 31,
+    number: 28,
+    name: 'azul turquesa',
+    hex: '#40E0D0',
+  },
+  {
+    id: 32,
+    number: 36,
+    name: 'dourado brilhante',
+    hex: '#D4AF37',
+  },
+  {
+    id: 33,
+    number: 10,
+    name: 'rosa terra',
+    hex: '#D68568',
+  },
+  {
+    id: 34,
+    number: 29,
+    name: 'azul',
+    hex: '#1dc5ef',
+  },
+  {
+    id: 35,
+    number: 41,
+    name: 'nude caramelo',
+    hex: '#C8856A',
+  },
+  {
+    id: 36,
+    number: 30,
+    name: 'azul turquesa oceano',
+    hex: '#18d39e',
+  },
+  {
+    id: 37,
+    number: 61,
+    name: 'verniz térmico - roxo (frio) + bege (quente)',
+    hex: '#631446',
+    quente: 'ffeef2',
+  },
+  {
+    id: 38,
+    number: 13,
+    name: 'nude acinzentado',
+    hex: '#B6866A',
+  },
+  {
+    id: 39,
+    number: 37,
+    name: 'vermelho brilhante',
+    hex: '#FF3030',
+  },
+  {
+    id: 40,
+    number: 59,
+    name: 'verniz térmico - bordeaux (frio) + rosa nude (quente)',
+    hex: '#800020',
+    quente: 'e59084',
+  },
+  {
+    id: 41,
+    number: 25,
+    name: 'cinza rato',
+    hex: '#686070',
+  },
+  {
+    id: 42,
+    number: 45,
+    name: 'vermelho néon',
+    hex: '#FF1f1f',
+  },
+  {
+    id: 43,
+    number: 11,
+    name: 'nude chocolate',
+    hex: '#925419',
+  },
+  {
+    id: 44,
+    number: 38,
+    name: 'verde brilhante',
+    hex: '#008040',
+  },
+  {
+    id: 45,
+    number: 46,
+    name: 'rosa choque',
+    hex: '#Ff0031',
+  },
+  {
+    id: 46,
+    number: 20,
+    name: 'vermelho coral',
+    hex: '#FF0000',
+  },
+  {
+    id: 47,
+    number: 48,
+    name: 'verde tropa',
+    hex: '#4B5320',
+  },
+  {
+    id: 48,
+    number: 43,
+    name: 'verde floresta',
+    hex: '#0f6b3d',
+  },
+  {
+    id: 49,
+    number: 21,
+    name: 'vermelho rubi',
+    hex: '#F00000',
+  },
+  {
+    id: 50,
+    number: 19,
+    name: 'vermelho ferrari',
+    hex: '#EF0000',
+  },
+  {
+    id: 51,
+    number: 22,
+    name: 'vermelho rosé',
+    hex: '#981B2F',
+  },
+  {
+    id: 52,
+    number: 18,
+    name: 'vermelho cereja',
+    hex: '#DD0000',
+  },
+  {
+    id: 53,
+    number: 60,
+    name: 'verniz térmico - roxo vivo (frio) + roxo claro (quente)',
+    hex: '#550055',
+    quente: '#ff008a',
+  },
+  {
+    id: 54,
+    number: 44,
+    name: 'roxo metalizado',
+    hex: '#612e39',
+  },
+  {
+    id: 55,
+    number: 17,
+    name: 'vermelho',
+    hex: '#CE0000',
+  },
+  {
+    id: 56,
+    number: 47,
+    name: 'vermelho bordeaux',
+    hex: '#9B111E',
+  },
+  {
+    id: 57,
+    number: 16,
+    name: 'vermelho terra',
+    hex: '#7C1010',
+  },
+  {
+    id: 58,
+    number: 14,
+    name: 'castanho chocolate',
+    hex: '#4A2511',
+  },
+  {
+    id: 59,
+    number: 15,
+    name: 'castanho cremoso',
+    hex: '#451510',
+  },
+  {
+    id: 60,
+    number: 40,
+    name: 'azul marinho',
+    hex: '#00001f',
+  },
+  {
+    id: 61,
+    number: 39,
+    name: 'preto',
+    hex: '#000000',
   },
 ];
-
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -215,13 +503,7 @@ const ColorSwatch = ({ color, index }) => {
           <div className="w-full bg-white/90 py-1 px-2 rounded-md text-xs font-medium text-center truncate">
             {color.name}
           </div>
-        </div>
-        
-        <div className="absolute top-2 right-2">
-          <div className="w-5 h-5 rounded-full flex items-center justify-center bg-white/80">
-            <Sparkles size={12} className="text-gray-700" />
-          </div>
-        </div>
+        </div> 
       </Card>
 
       {/* Popup with dynamic hand mockup */}
@@ -246,24 +528,14 @@ const ColorSwatch = ({ color, index }) => {
               <div className="text-center mt-2">
                 <h3 className="font-bold text-lg">{color.name}</h3>
                 <div className="inline-block mt-1 font-mono text-sm bg-gray-100 px-2 py-1 rounded-md mb-2">
-                  {color.hex}
+                  {color.number}
                 </div>
               </div>
               
               {/* Pointer arrow */}
               <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rotate-45 shadow-md"></div>
             </div>
-            
-            <div className="p-4 border-t border-gray-100">
-              <div className="flex items-center justify-between text-sm text-gray-700">
-                <div className="flex items-center">
-                  <div className="w-4 h-4 rounded-full mr-2" style={{ backgroundColor: color.hex }}></div>
-                  <span>Pré-visualização</span>
-                </div>
-                <span className="text-primary-600 font-medium">Acabamento Brilhante</span>
-              </div>
-            </div>
-          </motion.div>
+           </motion.div>
         )}
       </AnimatePresence>
     </motion.div>
