@@ -5,6 +5,7 @@ import { Palette, Sparkles, Info } from 'lucide-react';
 
 // Dados das cores
 const colorData = [
+  // Whites
   {
     id: 1,
     number: 2,
@@ -17,11 +18,42 @@ const colorData = [
     name: 'branco leitoso',
     hex: '#F5F5F5',
   },
+  // Very light pastels
   {
     id: 3,
     number: 54,
     name: 'rosa pastel',
     hex: '#ffeef2',
+  },
+  {
+    id: 7,
+    number: 26,
+    name: 'azul transparente',
+    hex: '#e0f2f6',
+  },
+  {
+    id: 10,
+    number: 35,
+    name: 'gliter prateado',
+    hex: '#E6E8FA',
+  },
+  {
+    id: 8,
+    number: 58,
+    name: 'azul pastel',
+    hex: '#cdf7f5',
+  },
+  {
+    id: 11,
+    number: 3,
+    name: 'rosa leitoso',
+    hex: '#FFDBEB',
+  },
+  {
+    id: 13,
+    number: 57,
+    name: 'lilás pastel',
+    hex: '#FFD1DC',
   },
   {
     id: 4,
@@ -36,64 +68,23 @@ const colorData = [
     hex: '#fdfd8e',
   },
   {
+    id: 15,
+    number: 56,
+    name: 'verde água pastel',
+    hex: '#acf1ac',
+  },
+  {
     id: 6,
     number: 4,
     name: 'bege claro',
     hex: '#F5F0DC',
   },
-  {
-    id: 7,
-    number: 26,
-    name: 'azul transparente',
-    hex: '#e0f2f6',
-  },
-  {
-    id: 8,
-    number: 58,
-    name: 'azul pastel',
-    hex: '#cdf7f5',
-  },
-  {
-    id: 9,
-    number: 33,
-    name: 'amarelo limão',
-    hex: '#FFFF45',
-  },
-  {
-    id: 10,
-    number: 35,
-    name: 'gliter prateado',
-    hex: '#E6E8FA',
-  },
-  {
-    id: 11,
-    number: 3,
-    name: 'rosa leitoso',
-    hex: '#FFDBEB',
-  },
-  {
-    id: 12,
-    number: 5,
-    name: 'bege creme',
-    hex: '#F3E5AB',
-  },
-  {
-    id: 13,
-    number: 57,
-    name: 'lilás pastel',
-    hex: '#FFD1DC',
-  },
+  // Light colors
   {
     id: 14,
     number: 42,
     name: 'rosa quartzo efeito areado',
     hex: '#F7CAC9',
-  },
-  {
-    id: 15,
-    number: 56,
-    name: 'verde água pastel',
-    hex: '#acf1ac',
   },
   {
     id: 16,
@@ -102,70 +93,16 @@ const colorData = [
     hex: '#cedf74',
   },
   {
-    id: 17,
-    number: 52,
-    name: 'amarelo alaranjado',
-    hex: '#FFbc62',
+    id: 12,
+    number: 5,
+    name: 'bege creme',
+    hex: '#F3E5AB',
   },
   {
-    id: 18,
-    number: 6,
-    name: 'nude rosa',
-    hex: '#E8B8B1',
-  },
-  {
-    id: 19,
-    number: 7,
-    name: 'rosa claro',
-    hex: '#FFA9B8',
-  },
-  {
-    id: 20,
-    number: 23,
-    name: 'lavanda',
-    hex: '#eaa7ea',
-  },
-  {
-    id: 21,
-    number: 9,
-    name: 'nude pêssego',
-    hex: '#F6B380',
-  },
-  {
-    id: 22,
-    number: 34,
-    name: 'prateado brilhante',
-    hex: '#C0C0C0',
-  },
-  {
-    id: 23,
-    number: 32,
-    name: 'verde lima',
-    hex: '#75ff36',
-  },
-  {
-    id: 24,
-    number: 12,
-    name: 'cinza pérola',
-    hex: '#CCB4A7',
-  },
-  {
-    id: 25,
-    number: 31,
-    name: 'verde',
-    hex: '#53ff53',
-  },
-  {
-    id: 26,
-    number: 8,
-    name: 'nude rosa quente',
-    hex: '#E6A39A',
-  },
-  {
-    id: 27,
-    number: 24,
-    name: 'lilás suave',
-    hex: '#dd96dd',
+    id: 9,
+    number: 33,
+    name: 'amarelo limão',
+    hex: '#FFFF45',
   },
   {
     id: 28,
@@ -174,10 +111,65 @@ const colorData = [
     hex: '#FF9295',
   },
   {
+    id: 19,
+    number: 7,
+    name: 'rosa claro',
+    hex: '#FFA9B8',
+  },
+  {
+    id: 18,
+    number: 6,
+    name: 'nude rosa',
+    hex: '#E8B8B1',
+  },
+  {
+    id: 17,
+    number: 52,
+    name: 'amarelo alaranjado',
+    hex: '#FFbc62',
+  },
+  // Medium colors
+  {
+    id: 20,
+    number: 23,
+    name: 'lavanda',
+    hex: '#eaa7ea',
+  },
+  {
+    id: 27,
+    number: 24,
+    name: 'lilás suave',
+    hex: '#dd96dd',
+  },
+  {
+    id: 21,
+    number: 9,
+    name: 'nude pêssego',
+    hex: '#F6B380',
+  },
+  {
+    id: 24,
+    number: 12,
+    name: 'cinza pérola',
+    hex: '#CCB4A7',
+  },
+  {
+    id: 26,
+    number: 8,
+    name: 'nude rosa quente',
+    hex: '#E6A39A',
+  },
+  {
     id: 29,
     number: 27,
     name: 'azul bebé',
     hex: '#a4aed9',
+  },
+  {
+    id: 22,
+    number: 34,
+    name: 'prateado brilhante',
+    hex: '#C0C0C0',
   },
   {
     id: 30,
@@ -186,22 +178,16 @@ const colorData = [
     hex: '#C8AD7F',
   },
   {
-    id: 31,
-    number: 28,
-    name: 'azul turquesa',
-    hex: '#40E0D0',
+    id: 23,
+    number: 32,
+    name: 'verde lima',
+    hex: '#75ff36',
   },
   {
-    id: 32,
-    number: 36,
-    name: 'dourado brilhante',
-    hex: '#D4AF37',
-  },
-  {
-    id: 33,
-    number: 10,
-    name: 'rosa terra',
-    hex: '#D68568',
+    id: 25,
+    number: 31,
+    name: 'verde',
+    hex: '#53ff53',
   },
   {
     id: 34,
@@ -210,10 +196,10 @@ const colorData = [
     hex: '#1dc5ef',
   },
   {
-    id: 35,
-    number: 41,
-    name: 'nude caramelo',
-    hex: '#C8856A',
+    id: 31,
+    number: 28,
+    name: 'azul turquesa',
+    hex: '#40E0D0',
   },
   {
     id: 36,
@@ -222,11 +208,17 @@ const colorData = [
     hex: '#18d39e',
   },
   {
-    id: 37,
-    number: 61,
-    name: 'verniz térmico - roxo (frio) + bege (quente)',
-    hex: '#631446',
-    quente: 'ffeef2',
+    id: 33,
+    number: 10,
+    name: 'rosa terra',
+    hex: '#D68568',
+  },
+  // Medium-dark colors
+  {
+    id: 35,
+    number: 41,
+    name: 'nude caramelo',
+    hex: '#C8856A',
   },
   {
     id: 38,
@@ -235,17 +227,10 @@ const colorData = [
     hex: '#B6866A',
   },
   {
-    id: 39,
-    number: 37,
-    name: 'vermelho brilhante',
-    hex: '#FF3030',
-  },
-  {
-    id: 40,
-    number: 59,
-    name: 'verniz térmico - bordeaux (frio) + rosa nude (quente)',
-    hex: '#800020',
-    quente: 'e59084',
+    id: 32,
+    number: 36,
+    name: 'dourado brilhante',
+    hex: '#D4AF37',
   },
   {
     id: 41,
@@ -253,23 +238,18 @@ const colorData = [
     name: 'cinza rato',
     hex: '#686070',
   },
+  // Reds (medium to dark)
+  {
+    id: 39,
+    number: 37,
+    name: 'vermelho brilhante',
+    hex: '#FF3030',
+  },
   {
     id: 42,
     number: 45,
     name: 'vermelho néon',
     hex: '#FF1f1f',
-  },
-  {
-    id: 43,
-    number: 11,
-    name: 'nude chocolate',
-    hex: '#925419',
-  },
-  {
-    id: 44,
-    number: 38,
-    name: 'verde brilhante',
-    hex: '#008040',
   },
   {
     id: 45,
@@ -284,18 +264,6 @@ const colorData = [
     hex: '#FF0000',
   },
   {
-    id: 47,
-    number: 48,
-    name: 'verde tropa',
-    hex: '#4B5320',
-  },
-  {
-    id: 48,
-    number: 43,
-    name: 'verde floresta',
-    hex: '#0f6b3d',
-  },
-  {
     id: 49,
     number: 21,
     name: 'vermelho rubi',
@@ -308,35 +276,22 @@ const colorData = [
     hex: '#EF0000',
   },
   {
-    id: 51,
-    number: 22,
-    name: 'vermelho rosé',
-    hex: '#981B2F',
-  },
-  {
     id: 52,
     number: 18,
     name: 'vermelho cereja',
     hex: '#DD0000',
   },
   {
-    id: 53,
-    number: 60,
-    name: 'verniz térmico - roxo vivo (frio) + roxo claro (quente)',
-    hex: '#550055',
-    quente: '#ff008a',
-  },
-  {
-    id: 54,
-    number: 44,
-    name: 'roxo metalizado',
-    hex: '#612e39',
-  },
-  {
     id: 55,
     number: 17,
     name: 'vermelho',
     hex: '#CE0000',
+  },
+  {
+    id: 51,
+    number: 22,
+    name: 'vermelho rosé',
+    hex: '#981B2F',
   },
   {
     id: 56,
@@ -350,6 +305,37 @@ const colorData = [
     name: 'vermelho terra',
     hex: '#7C1010',
   },
+  // Dark greens and browns
+  {
+    id: 44,
+    number: 38,
+    name: 'verde brilhante',
+    hex: '#008040',
+  },
+  {
+    id: 48,
+    number: 43,
+    name: 'verde floresta',
+    hex: '#0f6b3d',
+  },
+  {
+    id: 47,
+    number: 48,
+    name: 'verde tropa',
+    hex: '#4B5320',
+  },
+  {
+    id: 43,
+    number: 11,
+    name: 'nude chocolate',
+    hex: '#925419',
+  },
+  {
+    id: 54,
+    number: 44,
+    name: 'roxo metalizado',
+    hex: '#612e39',
+  },
   {
     id: 58,
     number: 14,
@@ -362,6 +348,7 @@ const colorData = [
     name: 'castanho cremoso',
     hex: '#451510',
   },
+  // Darkest colors
   {
     id: 60,
     number: 40,
@@ -374,7 +361,30 @@ const colorData = [
     name: 'preto',
     hex: '#000000',
   },
+  // Thermal polishes (special category at the end as they change color)
+  {
+    id: 40,
+    number: 59,
+    name: 'verniz térmico - bordeaux (frio) + rosa nude (quente)',
+    hex: '#800020',
+    quente: '#e59084',
+  },
+  {
+    id: 37,
+    number: 61,
+    name: 'verniz térmico - roxo (frio) + bege (quente)',
+    hex: '#631446',
+    quente: '#ffeef2',
+  },
+  {
+    id: 53,
+    number: 60,
+    name: 'verniz térmico - roxo vivo (frio) + roxo claro (quente)',
+    hex: '#550055',
+    quente: '#ff008a',
+  },
 ];
+
 // Animation variants
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -402,10 +412,19 @@ const itemFade = {
 
 // Hand mockup component
 // Nail bottle SVG that changes color based on hover
-const HandNailsPreview = ({ color }) => {
-  // Generate darker and lighter variations of the base color
-  const darkerColor = adjustColor(color, -20);
-  const lighterColor = adjustColor(color, 15);
+const HandNailsPreview = ({ colorData }) => {
+  // Check if this is a thermal polish
+  const isThermal = colorData.quente !== undefined;
+  const gradientId = `thermal-gradient-${colorData.id}`;
+  
+  // For regular polish, calculate variations
+  const darkerColor = adjustColor(colorData.hex, -20);
+  const lighterColor = adjustColor(colorData.hex, 15);
+  
+  // Ensure quente color has # prefix
+  const quenteColor = isThermal ? 
+    (colorData.quente.startsWith('#') ? colorData.quente : `#${colorData.quente}`) : 
+    '';
   
   // Helper function to adjust colors
   function adjustColor(hex, percent) {
@@ -423,6 +442,16 @@ const HandNailsPreview = ({ color }) => {
   return (
     <div className="flex justify-center py-2">
       <svg height="200px" width="200px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.2 483.2" xmlSpace="preserve" fill="#000000" className="drop-shadow-md">
+        <defs>
+          {isThermal && (
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor={colorData.hex} />
+              <stop offset="50%" stopColor={colorData.hex} />
+              <stop offset="50%" stopColor={quenteColor} />
+              <stop offset="100%" stopColor={quenteColor} />
+            </linearGradient>
+          )}
+        </defs>
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
@@ -430,9 +459,18 @@ const HandNailsPreview = ({ color }) => {
           <path style={{fill: "#E09370"}} d="M336.8,481.6c0-8,0-22.4,0-35.2c0-236-56.8-426.4-94.4-426.4s-68,190.4-68,426.4 c0,12.8,0,27.2,0,35.2H336.8z"></path>
           <path style={{fill: "#EFAC86"}} d="M240.8,20.8c-40,9.6-69.6,192.8-65.6,425.6c0,12.8,0,27.2,0,35.2h67.2L240.8,20.8z"></path>
           <path style={{fill: "#CC7954"}} d="M336.8,483.2c0-11.2,0-23.2,0-36c0-236-42.4-427.2-95.2-427.2"></path>
-          <path style={{fill: color}} d="M296.8,144c0,80-24.8,69.6-54.4,69.6c-30.4,0-54.4,9.6-54.4-69.6S212.8,0,242.4,0 C272.8,0,296.8,64,296.8,144z"></path>
-          <path style={{fill: darkerColor}} d="M242.4,0c30.4,0,54.4,64.8,54.4,144s-24.8,69.6-54.4,69.6"></path>
-          <path style={{fill: lighterColor}} d="M205.6,65.6c-4.8,24-4,44,1.6,45.6c6.4,1.6,15.2-16,20.8-40c4.8-24,4-44-1.6-45.6 C220,23.2,211.2,41.6,205.6,65.6z"></path>
+          <path 
+            style={{fill: isThermal ? `url(#${gradientId})` : colorData.hex}} 
+            d="M296.8,144c0,80-24.8,69.6-54.4,69.6c-30.4,0-54.4,9.6-54.4-69.6S212.8,0,242.4,0 C272.8,0,296.8,64,296.8,144z"
+          ></path>
+          <path 
+            style={{fill: isThermal ? 'none' : darkerColor}} 
+            d="M242.4,0c30.4,0,54.4,64.8,54.4,144s-24.8,69.6-54.4,69.6"
+          ></path>
+          <path 
+            style={{fill: isThermal ? 'none' : lighterColor}} 
+            d="M205.6,65.6c-4.8,24-4,44,1.6,45.6c6.4,1.6,15.2-16,20.8-40c4.8-24,4-44-1.6-45.6 C220,23.2,211.2,41.6,205.6,65.6z"
+          ></path>
         </g>
       </svg>
     </div>
@@ -440,10 +478,19 @@ const HandNailsPreview = ({ color }) => {
 };
 
 // Mobile version of the same SVG (smaller)
-const MobileNailPreview = ({ color }) => {
-  // Generate darker and lighter variations of the base color
-  const darkerColor = adjustColor(color, -20);
-  const lighterColor = adjustColor(color, 15);
+const MobileNailPreview = ({ colorData }) => {
+  // Check if this is a thermal polish
+  const isThermal = colorData.quente !== undefined;
+  const gradientId = `mobile-thermal-gradient-${colorData.id}`;
+  
+  // For regular polish, calculate variations
+  const darkerColor = adjustColor(colorData.hex, -20);
+  const lighterColor = adjustColor(colorData.hex, 15);
+  
+  // Ensure quente color has # prefix
+  const quenteColor = isThermal ? 
+    (colorData.quente.startsWith('#') ? colorData.quente : `#${colorData.quente}`) : 
+    '';
   
   // Helper function to adjust colors
   function adjustColor(hex, percent) {
@@ -461,6 +508,16 @@ const MobileNailPreview = ({ color }) => {
   return (
     <div className="flex justify-center py-2 sm:hidden">
       <svg height="120px" width="120px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 483.2 483.2" xmlSpace="preserve" fill="#000000" className="drop-shadow-md">
+        <defs>
+          {isThermal && (
+            <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor={colorData.hex} />
+              <stop offset="50%" stopColor={colorData.hex} />
+              <stop offset="50%" stopColor={quenteColor} />
+              <stop offset="100%" stopColor={quenteColor} />
+            </linearGradient>
+          )}
+        </defs>
         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
         <g id="SVGRepo_iconCarrier">
@@ -468,9 +525,18 @@ const MobileNailPreview = ({ color }) => {
           <path style={{fill: "#E09370"}} d="M336.8,481.6c0-8,0-22.4,0-35.2c0-236-56.8-426.4-94.4-426.4s-68,190.4-68,426.4 c0,12.8,0,27.2,0,35.2H336.8z"></path>
           <path style={{fill: "#EFAC86"}} d="M240.8,20.8c-40,9.6-69.6,192.8-65.6,425.6c0,12.8,0,27.2,0,35.2h67.2L240.8,20.8z"></path>
           <path style={{fill: "#CC7954"}} d="M336.8,483.2c0-11.2,0-23.2,0-36c0-236-42.4-427.2-95.2-427.2"></path>
-          <path style={{fill: color}} d="M296.8,144c0,80-24.8,69.6-54.4,69.6c-30.4,0-54.4,9.6-54.4-69.6S212.8,0,242.4,0 C272.8,0,296.8,64,296.8,144z"></path>
-          <path style={{fill: darkerColor}} d="M242.4,0c30.4,0,54.4,64.8,54.4,144s-24.8,69.6-54.4,69.6"></path>
-          <path style={{fill: lighterColor}} d="M205.6,65.6c-4.8,24-4,44,1.6,45.6c6.4,1.6,15.2-16,20.8-40c4.8-24,4-44-1.6-45.6 C220,23.2,211.2,41.6,205.6,65.6z"></path>
+          <path 
+            style={{fill: isThermal ? `url(#${gradientId})` : colorData.hex}} 
+            d="M296.8,144c0,80-24.8,69.6-54.4,69.6c-30.4,0-54.4,9.6-54.4-69.6S212.8,0,242.4,0 C272.8,0,296.8,64,296.8,144z"
+          ></path>
+          <path 
+            style={{fill: isThermal ? 'none' : darkerColor}} 
+            d="M242.4,0c30.4,0,54.4,64.8,54.4,144s-24.8,69.6-54.4,69.6"
+          ></path>
+          <path 
+            style={{fill: isThermal ? 'none' : lighterColor}} 
+            d="M205.6,65.6c-4.8,24-4,44,1.6,45.6c6.4,1.6,15.2-16,20.8-40c4.8-24,4-44-1.6-45.6 C220,23.2,211.2,41.6,205.6,65.6z"
+          ></path>
         </g>
       </svg>
     </div>
@@ -480,7 +546,6 @@ const MobileNailPreview = ({ color }) => {
 // Componente de cor com popup e mockup de mão
 const ColorSwatch = ({ color, index }) => {
   const [showPopup, setShowPopup] = useState(false);
-  
   return (
     <motion.div 
       className="relative"
@@ -519,17 +584,24 @@ const ColorSwatch = ({ color, index }) => {
             <div className="relative p-4 bg-gradient-to-br from-gray-50 to-gray-100">
               {/* Desktop Hand Mockup (hidden on mobile) */}
               <div className="hidden sm:block">
-                <HandNailsPreview color={color.hex} />
+                <HandNailsPreview colorData={color} />
               </div>
               
               {/* Mobile-friendly nail preview (visible only on mobile) */}
-              <MobileNailPreview color={color.hex} />
+              <MobileNailPreview colorData={color} />
               
               <div className="text-center mt-2">
                 <h3 className="font-bold text-lg">{color.name}</h3>
                 <div className="inline-block mt-1 font-mono text-sm bg-gray-100 px-2 py-1 rounded-md mb-2">
                   {color.number}
                 </div>
+                
+                {/* Show thermal info if applicable */}
+                {color.quente && (
+                  <div className="text-xs text-gray-600 mt-1">
+                    Verniz térmico com efeito de mudança de cor
+                  </div>
+                )}
               </div>
               
               {/* Pointer arrow */}
