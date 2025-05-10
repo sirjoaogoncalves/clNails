@@ -13,23 +13,23 @@ import { useInView } from 'framer-motion';
 const featuredServices = [
   {
     id: 1,
-    title: "Manicure Clássica",
+    title: "",
     image: "/src/assets/images/service-classic.jpg",
   },
   {
     id: 2,
-    title: "Verniz Gel",
+    title: "",
     image: "/src/assets/images/service-gel.jpg",
   },
   {
     id: 3,
-    title: "Nail Art Design",
-    image: "/src/assets/images/service-nailart.jpg",
+    title: "",
+    image: "/src/assets/images/IMG_6808.jpeg",
   },
   {
     id: 4,
-    title: "Pedicure Spa de Luxo",
-    image: "/src/assets/images/service-pedicure.jpg",
+    title: "",
+    image: "/src/assets/images/IMG_6808.jpeg",
   }
 ];
 
