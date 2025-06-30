@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import ReactDOM from 'react-dom';
 
 // Importar a imagem do logotipo
-import logoImage from '/src/assets/images/cnail.png';
+import logoImage from '/cnail.png';
 
 const navLinkVariants = {
   initial: { y: -5, opacity: 0 },
