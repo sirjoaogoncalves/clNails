@@ -1,31 +1,29 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import viteImagemin from 'vite-plugin-imagemin';
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
 export default defineConfig({
   plugins: [
     react(),
-    viteImagemin({
-      // JPEG optimization
-      mozjpeg: {
-        quality: 75, // Quality level (0-100)
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
       },
-      // PNG optimization
-      pngquant: {
-        quality: [0.6, 0.8], // Quality range
-        speed: 4,
+      jpeg: {
+        quality: 80,
       },
-      // WebP conversion and optimization
+      jpg: {
+        quality: 80,
+      },
       webp: {
-        quality: 75,
-      },
-      // GIF optimization
-      gifsicle: {
-        optimizationLevel: 7,
+        quality: 80,
       },
     }),
   ],
+  build: {
+    assetsInlineLimit: 0, // Prevent inlining, force file generation
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

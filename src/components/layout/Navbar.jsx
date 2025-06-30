@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "../ui/button";
 import { Link, useLocation } from 'react-router-dom';
@@ -16,12 +15,12 @@ const navLinkVariants = {
 };
 
 const mobileMenuVariants = {
-  closed: { 
+  closed: {
     opacity: 0,
     x: "100%",
     transition: { duration: 0.3 }
   },
-  open: { 
+  open: {
     opacity: 1,
     x: 0,
     transition: { duration: 0.3 }
@@ -31,7 +30,7 @@ const mobileMenuVariants = {
 // Portal component for the mobile menu
 const MobileMenuPortal = ({ children, isOpen }) => {
   if (!isOpen) return null;
-  
+
   // Create a portal directly to the body to avoid nesting issues
   return ReactDOM.createPortal(
     children,
@@ -47,6 +46,15 @@ const Navbar = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Scroll to top when route changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
+  }, [location.pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -88,11 +96,17 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  // Handle navigation click with scroll to top
+  const handleNavClick = () => {
+    setIsMenuOpen(false); // Close mobile menu
+    // Scroll to top will be handled by the useEffect listening to location.pathname
+  };
+
   const MobileMenu = () => (
     <AnimatePresence>
       {isMenuOpen && (
         <>
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -101,7 +115,7 @@ const Navbar = () => {
             style={{ zIndex: 9998 }}
             onClick={() => setIsMenuOpen(false)}
           />
-          <motion.div 
+          <motion.div
             className="fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-xl p-6 overflow-y-auto"
             style={{ zIndex: 9999 }}
             variants={mobileMenuVariants}
@@ -112,17 +126,17 @@ const Navbar = () => {
           >
             <div className="flex justify-between items-center mb-8">
               <img src={logoImage} alt="CL Nail Designer" className="h-10" />
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                onClick={toggleMenu} 
+              <Button
+                variant="ghost"
+                size="icon"
+                onClick={toggleMenu}
                 aria-label="Fechar menu"
                 className="text-gray-700 hover:text-primary transition-colors"
               >
                 <X size={24} />
               </Button>
             </div>
-            
+
             <div className="flex flex-col space-y-1">
               {navLinks.map((link, index) => (
                 <motion.div
@@ -131,16 +145,16 @@ const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1, duration: 0.3 }}
                 >
-                  <Link 
-                    to={link.path} 
+                  <Link
+                    to={link.path}
                     className={`flex items-center text-gray-800 hover:bg-primary-50 hover:text-primary font-medium py-3 px-4 rounded-lg transition-all duration-300 ${
                       isActive(link.path) ? 'bg-primary-50 text-primary' : ''
                     }`}
-                    onClick={toggleMenu}
+                    onClick={handleNavClick}
                   >
                     {link.label}
                     {isActive(link.path) && (
-                      <motion.div 
+                      <motion.div
                         className="ml-2 w-1.5 h-1.5 rounded-full bg-primary"
                         layoutId="mobileDot"
                       />
@@ -148,21 +162,21 @@ const Navbar = () => {
                   </Link>
                 </motion.div>
               ))}
-              
+
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: navLinks.length * 0.1, duration: 0.3 }}
                 className="pt-4 mt-4 border-t border-gray-100"
               >
-                <Link to="/contact" onClick={toggleMenu}>
+                <Link to="/contact" onClick={handleNavClick}>
                   <Button className="bg-primary hover:bg-primary-700 w-full rounded-full shadow-md">
                     Contacte-nos
                   </Button>
                 </Link>
               </motion.div>
             </div>
-            
+
             {/* Social Links in Mobile Menu */}
             <div className="mt-auto pt-8 border-t border-gray-100 mt-8">
               <p className="text-sm text-gray-600 mb-4">Siga-nos nas redes sociais</p>
@@ -188,10 +202,10 @@ const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <motion.img 
-              src={logoImage} 
-              alt="CL Nail Designer" 
+          <Link to="/" className="flex items-center" onClick={handleNavClick}>
+            <motion.img
+              src={logoImage}
+              alt="CL Nail Designer"
               className="h-12"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -211,11 +225,12 @@ const Navbar = () => {
                 custom={index}
                 className="relative"
               >
-                <Link 
-                  to={link.path} 
+                <Link
+                  to={link.path}
                   className={`text-gray-800 hover:text-primary font-medium transition-colors duration-300 py-2 ${
                     isActive(link.path) ? 'text-primary' : ''
                   }`}
+                  onClick={handleNavClick}
                 >
                   {link.label}
                   {isActive(link.path) && (
@@ -235,7 +250,7 @@ const Navbar = () => {
               variants={navLinkVariants}
               custom={5}
             >
-              <Link to="/contact">
+              <Link to="/contact" onClick={handleNavClick}>
                 <Button className="bg-primary hover:bg-primary-700 rounded-full shadow-sm transition-all duration-300">
                   Contacte-nos
                 </Button>
@@ -244,10 +259,10 @@ const Navbar = () => {
           </nav>
 
           {/* Menu Toggle Button */}
-          <Button 
-            variant="ghost" 
-            size="icon" 
-            onClick={toggleMenu} 
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={toggleMenu}
             aria-label="Menu"
             className="md:hidden flex items-center justify-center"
           >
