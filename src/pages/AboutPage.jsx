@@ -124,7 +124,7 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
               <div className="absolute -top-4 -right-4 w-full h-full bg-primary-200 rounded-lg opacity-30 transform rotate-3"></div>
               <div className="rounded-lg overflow-hidden shadow-xl relative z-10">
                 <img 
-                  src="/src/assets/images/cnail.png" 
+                  src="/cnail.png"
                   alt="CL Nail Designer" 
                   className="w-full h-full object-cover"
                 />

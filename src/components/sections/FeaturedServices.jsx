@@ -12,28 +12,28 @@ const services = [
     title: "Manicure Clássica",
     description: "A nossa manicure assinatura inclui modelagem de unhas, tratamento de cutículas, massagem às mãos e aplicação de verniz.",
     price: "30€",
-    image: "/src/assets/images/service-classic.jpg",
+    image: "../assets/images/service-classic.jpg",
   },
   {
     id: 2,
     title: "Verniz Gel",
     description: "Verniz de gel de longa duração que permanece brilhante e sem lascar até duas semanas.",
     price: "45€",
-    image: "/src/assets/images/service-gel.jpg",
+    image: "../assets/images/service-gel.jpg",
   },
   {
     id: 3,
     title: "Nail Art Design",
     description: "Expresse-se com desenhos personalizados criados pelos nossos talentosos artistas.",
     price: "A partir de 15€",
-    image: "/src/assets/images/service-nailart.jpg",
+    image: "../assets/images/service-nailart.jpg",
   },
   {
     id: 4,
     title: "Pedicure Spa de Luxo",
     description: "Delicie-se com a nossa pedicure premium com esfoliação, máscara, massagem prolongada e verniz.",
     price: "65€",
-    image: "/src/assets/images/service-pedicure.jpg",
+    image: "../assets/images/service-pedicure.jpg",
   }
 ];
 

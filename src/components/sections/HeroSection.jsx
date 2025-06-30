@@ -9,27 +9,28 @@ import {
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 
+
 // Dados de serviços para o slider
 const featuredServices = [
   {
     id: 1,
     title: "",
-    image: "/src/assets/images/service-classic.jpg",
+    image: "/service-classic.jpg",  // Now in public folder
   },
   {
     id: 2,
     title: "",
-    image: "/src/assets/images/service-gel.jpg",
+    image: "/service-gel.jpg",
   },
   {
     id: 3,
     title: "",
-    image: "/src/assets/images/IMG_6808.jpeg",
+    image: "/IMG_6808.jpeg",
   },
   {
     id: 4,
     title: "",
-    image: "/src/assets/images/IMG_6808.jpeg",
+    image: "/IMG_6808.jpeg",
   }
 ];
 
