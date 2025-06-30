@@ -119,7 +119,7 @@ const Footer = () => {
 
         {/* Direitos de Autor */}
         <div className="border-t border-gray-200 mt-12 pt-6 text-center text-gray-600 text-sm">
-          © {new Date().getFullYear()} CL Nail Designer. Todos os direitos reservados.
+          © {new Date().getFullYear()} CL Designer. Todos os direitos reservados.
         </div>
       </div>
     </footer>

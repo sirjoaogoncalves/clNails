@@ -37,7 +37,7 @@ const CtaSection = () => {
               </span>?
             </h2>
             <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-white/90">
-              Marque a sua consulta hoje e deixe que as nossas técnicas especialistas transformem as suas unhas em verdadeiras obras de arte.
+              Realce a sua beleza com unhas perfeitas e cheias de personalidade. Contacte-nos e marque a sua experiência exclusiva.
             </p>
             
                        

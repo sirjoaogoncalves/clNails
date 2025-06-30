@@ -15,23 +15,33 @@ const featuredServices = [
   {
     id: 1,
     title: "",
-    image: "/service-classic.jpg",  // Now in public folder
+    image: "/service-classic.jpg",
   },
   {
     id: 2,
     title: "",
-    image: "/service-gel.jpg",
+    image: "/azul_quadrado_pagina_inicial.jpeg",
   },
   {
     id: 3,
     title: "",
-    image: "/IMG_6808.jpeg",
+    image: "/lilas_pagina_inicial.jpeg",
   },
   {
     id: 4,
     title: "",
+    image: "/verde_lima_pagina_inicial.jpeg",
+  },
+  {
+    id: 5,
+    title: "",
     image: "/IMG_6808.jpeg",
-  }
+  },
+  {
+    id: 6,
+    title: "",
+    image: "/service-gel.jpg",
+  },
 ];
 
 const HeroSection = () => {

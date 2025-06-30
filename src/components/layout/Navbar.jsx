@@ -47,15 +47,6 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Scroll to top when route changes
-  useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'smooth'
-    });
-  }, [location.pathname]);
-
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -96,10 +87,9 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
-  // Handle navigation click with scroll to top
+  // Handle navigation click - just close mobile menu
   const handleNavClick = () => {
     setIsMenuOpen(false); // Close mobile menu
-    // Scroll to top will be handled by the useEffect listening to location.pathname
   };
 
   const MobileMenu = () => (
