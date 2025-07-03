@@ -1,16 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "../ui/carousel";
+// Carousel imports - COMMENTED OUT FOR NOW
+// import {
+//   Carousel,
+//   CarouselContent,
+//   CarouselItem,
+// } from "../ui/carousel";
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
+import { ArrowRight, Palette } from 'lucide-react';
 
-
-// Dados de serviços para o slider
+// Service images for background carousel
 const featuredServices = [
   {
     id: 1,
@@ -45,142 +46,207 @@ const featuredServices = [
 ];
 
 const HeroSection = () => {
-  const [isHovering, setIsHovering] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [api, setApi] = useState();
+  // Carousel state - COMMENTED OUT FOR NOW
+  // const [activeIndex, setActiveIndex] = useState(0);
+  // const [api, setApi] = useState();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  // Handle carousel API
+  // Handle carousel API for background carousel - COMMENTED OUT FOR NOW
+  /*
   useEffect(() => {
     if (!api) return;
-    
+
     const scrollHandler = () => {
       const slideIndex = api.selectedScrollSnap();
       setActiveIndex(slideIndex);
     };
-    
+
     api.on("select", scrollHandler);
-    
+
     return () => {
       api.off("select", scrollHandler);
     };
   }, [api]);
 
-  // Auto-slide effect
+  // Auto-slide effect - no hover interference since users can't interact
   useEffect(() => {
-    if (isHovering || !api) return;
-    
+    if (!api) return;
+
     const interval = setInterval(() => {
       const nextIndex = (activeIndex + 1) % featuredServices.length;
       setActiveIndex(nextIndex);
       api.scrollTo(nextIndex);
     }, 4000);
-    
+
     return () => clearInterval(interval);
-  }, [isHovering, activeIndex, api]);
+  }, [activeIndex, api]);
+  */
 
   return (
-    <div className="overflow-hidden bg-gradient-to-r from-primary-50 to-primary-100" ref={ref}>
-      <div className="container mx-auto px-4 py-16 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="order-2 md:order-1"
-          >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Eleve o Seu <span className="text-primary bg-white px-2 py-1 rounded-lg shadow-sm">Estilo</span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
-              Experiencie cuidados e design de unhas premium na CL Nail Designer. 
-              Onde a arte encontra o relaxamento para a manicure perfeita.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/services">
-                <Button className="bg-primary hover:bg-primary-700 shadow-lg hover:shadow-xl transition-all duration-300 text-white px-8 py-6 h-auto text-lg rounded-full">
-                  Ver Os Nossos Serviços
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" className="border-primary text-primary hover:bg-primary-50 px-8 py-6 h-auto text-lg rounded-full transition-all duration-300">
-                  Contacte-nos
-                </Button>
-              </Link>
-            </div> 
-          </motion.div>
-          
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="order-1 md:order-2"
-          >
-            <div 
-              className="relative rounded-xl overflow-hidden shadow-2xl"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              <Carousel 
-                className="w-full"
-                opts={{
-                  align: "center",
-                  loop: true,
-                }}
-                setApi={setApi}
+    <div className="relative  overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-100" ref={ref}>
+      {/* Background Carousel - Non-interactive - COMMENTED OUT FOR NOW */}
+      {/*
+      <div className="absolute inset-0 z-0">
+        <Carousel
+          className="w-full h-full"
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          setApi={setApi}
+        >
+          <CarouselContent className="w-full h-full -ml-0">
+            {featuredServices.map((service, index) => (
+              <CarouselItem
+                key={service.id}
+                className="w-full flex-none pl-0 h-full"
               >
-                <CarouselContent 
-                  className="w-full"
-                >
-                  {featuredServices.map((service, index) => (
-                    <CarouselItem 
-                      key={service.id} 
-                      className="w-full flex-none"
-                      style={{ width: '100%' }}
-                    >
-                      <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
-                        <img 
-                          src={service.image} 
-                          alt={service.title} 
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
-                          <h3 className="text-white text-xl font-bold">{service.title}</h3>
-                        </div>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-              </Carousel>
-              
-              {/* Indicadores de slide */}
-              <div className="absolute bottom-3 left-0 right-0 flex justify-center space-x-2">
-                {featuredServices.map((_, index) => (
-                  <button
-                    key={index}
-                    className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                      activeIndex === index ? 'bg-white w-6' : 'bg-white/50'
-                    }`}
-                    onClick={() => {
-                      setActiveIndex(index);
-                      if (api) {
-                        api.scrollTo(index);
-                      }
+                <div className="relative w-full h-full">
+                  <img
+                    src={service.image}
+                    alt={`Nail art ${index + 1}`}
+                    className="w-full h-full object-cover"
+                  />
+                  <div
+                    className="absolute inset-0 bg-black/40"
+                    style={{
+                      backdropFilter: 'blur(2px)',
+                      WebkitBackdropFilter: 'blur(2px)'
                     }}
                   />
-                ))}
-              </div>
-            </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+        </Carousel>
+      </div>
+      */}
+
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary-200/30 -z-10 transform translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 left-0 w-80 h-80 rounded-full bg-primary-300/20 -z-10 transform -translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-1/3 left-10 w-32 h-32 rounded-full bg-primary-100/50 -z-10"></div>
+      <div className="absolute bottom-1/4 right-10 w-24 h-24 rounded-full bg-primary-200/40 -z-10"></div>
+
+      {/* Content Overlay */}
+      <div className="relative z-10 container mx-auto px-4 py-8 md:py-8 flex items-center min-h-screen">
+        <div className="w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            {/* Main heading */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0.9 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="mb-2"
+            >
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                Descubra a nossa{' '}
+                <span className="relative inline-block">
+                  <span className="relative z-10 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+                    Arte
+                  </span>
+                  <motion.span
+                    className="absolute bottom-2 left-0 right-0 h-3 bg-primary-300/60 rounded-full"
+                    initial={{ width: 0 }}
+                    animate={{ width: isInView ? "100%" : 0 }}
+                    transition={{ duration: 0.8, delay: 1 }}
+                  />
+                </span>
+              </h1>
+            </motion.div>
+
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-xl md:text-2xl lg:text-3xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
+            >
+              Onde cada unha se transforma com a sua personalidade.
+              <br className="hidden md:block" />
+              Explore a criatividade e elegância em cada detalhe.
+            </motion.p>
+
+            {/* Feature highlights */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+              transition={{ duration: 0.8, delay: 0.8 }}
+              className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8"
+            >
+              {[
+                { icon: Palette, text: "60+ cores únicas" },
+                { icon: ArrowRight, text: "Designs personalizados" },
+                { icon: Palette, text: "Nail art exclusiva" }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex items-center space-x-3 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 border border-primary-200/50 shadow-md"
+                >
+                  <item.icon className="h-5 w-5 text-primary-600" />
+                  <span className="text-gray-700 font-medium text-sm md:text-base">
+                    {item.text}
+                  </span>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 30 }}
+              transition={{ duration: 0.8, delay: 1 }}
+              className="flex flex-col sm:flex-row gap-1 md:gap-2 justify-center items-center"
+            >
+              <Link to="/gallery">
+                <Button
+                  className="group bg-primary hover:bg-primary-700 text-white px-8 py-6 h-auto text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-500"
+                >
+                  <span className="mr-2">Ver galeria</span>
+                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Button>
+              </Link>
+
+              <Link to="/colors">
+                <Button
+                  variant="outline"
+                  className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white backdrop-blur-sm px-8 py-6 h-auto text-lg rounded-full transition-all duration-500 shadow-md hover:shadow-lg"
+                >
+                  <Palette className="h-5 w-5 mr-2" />
+                  Explorar cores
+                </Button>
+              </Link>
+            </motion.div>
+
+            {/* Scroll indicator */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: isInView ? 1 : 0 }}
+              transition={{ duration: 1, delay: 1.5 }}
+              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+            >
+              <motion.div
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                className="w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center"
+              >
+                <motion.div
+                  animate={{ y: [0, 12, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.2 }}
+                  className="w-1 h-3 bg-primary-500 rounded-full mt-2"
+                />
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
-      </div>
-      
-      {/* Decoração de fundo */}
-      <div className="absolute top-0 right-0 -z-10 opacity-10">
-        <svg width="400" height="400" viewBox="0 0 200 200">
-          <path fill="#c4908f" d="M47.1,-57.7C59.2,-45,66.2,-28.7,70.4,-10.9C74.6,6.8,76,26,67.8,40.6C59.7,55.3,42,65.4,23.4,71.4C4.9,77.4,-14.5,79.3,-31.9,73C-49.4,66.6,-64.8,52,-71.9,33.8C-79,15.5,-77.9,-6.3,-69.9,-24.1C-61.9,-41.9,-47,-55.5,-31.2,-67.4C-15.5,-79.3,1.2,-89.5,16.3,-85.6C31.3,-81.7,45,-70.4,47.1,-57.7Z" transform="translate(100 100)" />
-        </svg>
       </div>
     </div>
   );

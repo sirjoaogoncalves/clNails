@@ -1,16 +1,29 @@
 import React, { useEffect } from 'react';
 import HeroSection from '../components/sections/HeroSection';
-import TestimonialsSection from '../components/sections/TestimonialsSection';
+import GallerySpotlight from '../components/sections/GallerySpotlight';
+import ColorPaletteTeaser from '../components/sections/ColorPaletteTeaser';
 import CtaSection from '../components/sections/CtaSection';
 import { motion } from 'framer-motion';
 
-// Configuração para scroll suave para toda a página
+// Animation variants for smooth section transitions
+const sectionVariants = {
+  hidden: { opacity: 0, y: 40 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"
+    }
+  }
+};
+
 const HomePage = () => {
   useEffect(() => {
-    // Adicionar scroll suave ao HTML
+    // Add smooth scrolling to HTML
     document.documentElement.style.scrollBehavior = 'smooth';
-    
-    // Limpar ao desmontar o componente
+
+    // Clean up when component unmounts
     return () => {
       document.documentElement.style.scrollBehavior = '';
     };
@@ -18,6 +31,7 @@ const HomePage = () => {
 
   return (
     <div className="overflow-hidden">
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -25,23 +39,33 @@ const HomePage = () => {
       >
         <HeroSection />
       </motion.div>
-      
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-          
-      </motion.div>
-      
 
-      
+      {/* Gallery Spotlight Section */}
       <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionVariants}
+      >
+        <GallerySpotlight />
+      </motion.div>
+
+      {/* Color Palette Teaser Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={sectionVariants}
+      >
+        <ColorPaletteTeaser />
+      </motion.div>
+
+      {/* Call to Action Section */}
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={sectionVariants}
       >
         <CtaSection />
       </motion.div>

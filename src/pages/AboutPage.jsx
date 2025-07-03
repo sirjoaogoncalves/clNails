@@ -85,7 +85,7 @@ const AboutPage = () => {
           className="text-center mb-16"
         >
           <h1 className="text-3xl md:text-5xl font-bold text-gray-900 relative inline-block">
-            Sobre a CL Nail Designer
+            Sobre a CL Designer
             <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
           </h1>
         </motion.div>
@@ -101,9 +101,9 @@ const AboutPage = () => {
               animate={storyInView ? "visible" : "hidden"}
               variants={fadeInLeft}
             >
-              <h2 className="text-2xl font-semibold mb-4 text-gray-900">A Nossa História</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-900">A nossa história</h2>
               <p className="text-gray-700 mb-4">
-                A CL Nail Designer surgiu com a paixão pela arte do designer de unhas e do seu significado, pois são uma extensão da nossa personalidade, uma forma delicada de expressar quem somos. Desta forma, a CL Nail Designer foi fundada com um propósito simples, mas cheio de significado: levar a arte, o cuidado e a autoestima até si, no conforto da sua casa.
+                A CL Designer surgiu com a paixão pela arte do designer de unhas e do seu significado, pois são uma extensão da nossa personalidade, uma forma delicada de expressar quem somos. Desta forma, a CL Designer foi fundada com um propósito simples, mas cheio de significado: levar a arte, o cuidado e a autoestima até si, no conforto da sua casa.
 
 Com formação especializada e uma dedicação genuína ao bem-estar de cada pessoa, levamos até si as últimas tendências, técnicas de excelência e materiais de alta qualidade. Mais do que criar unhas bonitas, queremos criar momentos especiais — onde o cuidado, a confiança e o brilho interior se encontram.
 
@@ -138,10 +138,10 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
           initial="hidden"
           animate={valuesInView ? "visible" : "hidden"}
           variants={fadeIn}
-          className="bg-gray-50 py-16 px-4 mb-16 rounded-lg"
+          className="py-16 px-4 mb-16 rounded-lg"
         >
           <h2 className="text-2xl font-semibold text-center mb-12 text-gray-900">
-            Os Nossos Valores
+            Os nossos valores
           </h2>
           
           <motion.div 

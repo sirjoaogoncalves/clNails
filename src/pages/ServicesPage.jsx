@@ -12,15 +12,15 @@ const serviceCategories = [
     services: [
       {
         id: 1,
-        title: 'Verniz de Gel',
-        description: 'Unhas com um acabamento brilhante e um toque profissional! Inclui cutilagem, preparação da unha, aplicação da cor à tua escolha e finalização com top coat. Perfeito para quem gosta de unhas simples e bem cuidadas.',
+        title: 'Verniz de gel',
+        description: 'Unhas com um acabamento brilhante e um toque profissional! Incluicutilagem, preparação da unha, aplicação da cor à tua escolha e finalização com top coat. Perfeito para quem gosta de unhas simples e bem cuidadas.',
         price: '10',
         duration: '+- 1h',
         popular: false,
       },
       {
         id: 2,
-        title: 'Aplicação de Gel',
+        title: 'Aplicação de gel',
         description: 'Transforma as tuas unhas com gel! Inclui cutilagem, preparação da unha, alongamento (se quiseres), construção em gel, aplicação da cor à tua escolha e finalização com top coat. Um resultado bonito, elegante e com aquele toque profissional que faz toda a diferença.',
         price: '20',
         duration: '+- 2h',
@@ -28,7 +28,7 @@ const serviceCategories = [
       },
       {
         id: 3,
-        title: 'Manutenção de Gel',
+        title: 'Manutenção de gel',
         description: 'Mantém as tuas unhas sempre bonitas e bem cuidadas! A manutenção inclui remoção do excesso de gel, ajuste do formato, cutilagem, nova aplicação de gel, cor à tua escolha e finalização com top coat.',
         price: '15',
         duration: '+- 2h',
@@ -36,23 +36,23 @@ const serviceCategories = [
       },
       {
         id: 4,
-        title: 'Polygel – 1ª Aplicação',
+        title: 'Polygel – 1ª aplicação',
         description: 'Serviço completo com preparação da unha natural, cutilagem, aplicação de Polygel (com ou sem alongamento), cor à escolha e finalização com top coat para brilho e proteção duradoura. Uma técnica versátil que fortalece as unhas e proporciona um acabamento natural, elegante e resistente. Ideal para quem deseja reforçar ou alongar as unhas com conforto e sofisticação.',
         price: '20',
         duration: '+- 2h',
         popular: false,
       },
       {
-        id: 4,
-        title: 'Polygel – Manutenção',
+        id: 5,
+        title: 'Polygel – manutenção',
         description: 'Serviço completo de manutenção com nivelamento e reforço da estrutura em Polygel, cutilagem, retoque ou troca de cor e finalização com top coat para restaurar o brilho e a durabilidade.Ideal para manter as unhas sempre bonitas, fortes e bem cuidadas, prolongando o efeito do alongamento ou reforço já aplicado.',
         price: '15',
         duration: '+- 2h',
         popular: false,
       },
       {
-        id: 5,
-        title : 'Remoção Total (sem nova aplicação)',
+        id: 6,
+        title : 'Remoção total (sem nova aplicação)',
         description:'Serviço de remoção completa e segura de qualquer tipo de produto — seja Polygel, gel ou verniz de gel. Inclui limagem técnica, remoção com produtos adequados, cutilagem e hidratação das unhas e cutículas.',
         price:'5',
         duration:'30min',
@@ -67,7 +67,7 @@ const serviceCategories = [
     services: [
       {
         id: 1,
-        title: 'Verniz de Gel',
+        title: 'Verniz de gel',
         description: 'Deixa os teus pés ainda mais bonitos com um acabamento brilhante e impecável! Inclui cutilagem, preparação das unhas, aplicação do verniz de gel na cor que escolheres e finalização com top coat. Perfeito para quem quer pés bem cuidados e com um toque de elegância.',
         price: '10',
         duration: '+-1h',
@@ -75,7 +75,7 @@ const serviceCategories = [
       },
       {
         id: 2,
-        title: 'Construção de Unhas do Pé em Polygel',
+        title: 'Construção de unhas do pé em polygel',
         description: 'Serviço completo para as unhas dos pés, com preparação da unha natural, cutilagem, aplicação de Polygel (com ou sem alongamento), cor à escolha e finalização com top coat para um acabamento duradouro, resistente e elegante.',
         price: '20',
         duration: '+-2h',
@@ -83,7 +83,7 @@ const serviceCategories = [
       },
       {
         id: 3,
-        title: 'Manutenção de Unhas do Pé em Polygel',
+        title: 'Manutenção de unhas do pé em polygel',
         description: 'Serviço completo de manutenção para unhas dos pés em Polygel, incluindo nivelamento e reforço da estrutura, cutilagem, retoque ou troca de cor e finalização com top coat para restaurar o brilho e a durabilidade.',
         price: '15',
         duration: '+-2h',
@@ -91,7 +91,7 @@ const serviceCategories = [
       },
       {
         id: 4,
-        title: 'Reconstrução de Unhas do Pé',
+        title: 'Reconstrução de unhas do pé',
         description: 'Serviço especializado de reconstrução de unhas dos pés com Polygel, indicado para unhas muito pequenas, danificadas ou ausentes. Inclui preparação da pele e da área, aplicação cuidadosa do Polygel para criar uma unha natural, resistente e com aspeto natural. ',
         price: '+2/unha',
         duration: '+-1h',
@@ -99,7 +99,7 @@ const serviceCategories = [
       },
       {
         id: 5,
-        title: 'Remoção de Peles Mortas + Esfoliação',
+        title: 'Remoção de peles mortas + esfoliação',
         description: 'Tratamento completo para pés suaves e renovados, que inclui a remoção cuidadosa das peles duras e calosidades seguida de uma esfoliação profunda para eliminar células mortas e estimular a renovação da pele. Ideal para manter os pés macios, hidratados e com aspeto saudável, prevenindo desconfortos e melhorando o bem-estar.',
         price: '+3',
         duration: '+-1h20min',
@@ -173,7 +173,7 @@ const ServicesPage = () => {
             className="text-center mb-16"
           >
             <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 relative inline-block">
-              Os Nossos Serviços
+              Os nossos serviços
               <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
             </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
@@ -266,7 +266,7 @@ const ServicesPage = () => {
               
               <h2 className="text-2xl font-semibold mb-8 text-center relative inline-flex items-center">
                 <Star className="text-primary h-5 w-5 mr-2" />
-                Informações Importantes
+                Informações importantes
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -274,7 +274,7 @@ const ServicesPage = () => {
                   whileHover={{ y: -5, transition: { duration: 0.2 } }}
                   className="bg-gradient-to-br from-white to-primary-50 p-6 rounded-xl shadow-md"
                 >
-                  <h3 className="font-semibold text-lg mb-3 text-primary-600">Nota sobre Preços</h3>
+                  <h3 className="font-semibold text-lg mb-3 text-primary-600">Nota sobre preços</h3>
                   <p className="text-gray-700">
                     Os preços mantêm-se fixos, independentemente:
                    <br/> 

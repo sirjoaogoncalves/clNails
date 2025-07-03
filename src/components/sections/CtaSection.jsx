@@ -31,8 +31,8 @@ const CtaSection = () => {
             className="text-center text-white"
           >
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              Pronta para Experimentar o <span className="relative inline-block">
-                Nosso Serviço
+              Pronta para experimentar o <span className="relative inline-block">
+                nosso serviço
                 <span className="absolute bottom-1 left-0 right-0 h-1 bg-white rounded"></span>
               </span>?
             </h2>
@@ -48,7 +48,7 @@ const CtaSection = () => {
             >
               <Link to="/contact">
                 <Button className="bg-white text-primary-600 hover:bg-white/90 px-8 py-6 h-auto text-lg rounded-full shadow-xl group">
-                  <span>Contacte-nos Agora</span>
+                  <span>Contacte-nos agora</span>
                 </Button>
               </Link>
               
