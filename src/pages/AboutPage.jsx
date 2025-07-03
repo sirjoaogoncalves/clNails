@@ -156,7 +156,7 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
                   </div>
                   <h3 className="text-xl font-medium mb-2">Paixão</h3>
                   <p className="text-gray-700">
-                    Somos apaixonados pelo cuidados e design de unhas e colocamos o coração em cada detalhe. É essa paixão que nos move a evoluir, criar e entregar sempre o melhor a quem confia em nós.
+                    Somos apaixonados pelo cuidado e design de unhas e colocamos o coração em cada detalhe. É essa paixão que nos move a evoluir, criar e entregar sempre o melhor a quem confia em nós.
                   </p>
                 </CardContent>
               </Card>
@@ -196,9 +196,9 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
                   <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6">
                     <Smile className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-medium mb-2">Foco no Cliente</h3>
+                  <h3 className="text-xl font-medium mb-2">Foco no cliente</h3>
                   <p className="text-gray-700">
-                    A sua satisfação é a nossa prioridade, e esforçamo-nos por exceder as suas expectativas em cada visita.
+                    A sua satisfação é a nossa prioridade, esforçamo-nos por exceder as suas expectativas em cada visita.
                   </p>
                 </CardContent>
               </Card>

@@ -170,7 +170,7 @@ const HeroSection = () => {
             >
               Onde cada unha se transforma com a sua personalidade.
               <br className="hidden md:block" />
-              Explore a criatividade e elegância em cada detalhe.
+              <span> </span>Explore a criatividade e elegância em cada detalhe.
             </motion.p>
 
             {/* Feature highlights */}
