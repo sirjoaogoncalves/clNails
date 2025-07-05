@@ -128,7 +128,7 @@ const DesktopNavigation = ({ navLinks, isActive, handleNavClick }) => (
     >
       <Link to="/contact" onClick={handleNavClick}>
         <Button className="bg-primary hover:bg-primary-700 text-white rounded-full shadow-sm hover:shadow-md transition-all duration-300 px-6 py-2 font-medium">
-          Contacte-nos
+          Contacta-nos
         </Button>
       </Link>
     </motion.div>
@@ -236,7 +236,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, navLinks, isActive, handleNavCl
               >
                 <Link to="/contact" onClick={handleNavClick}>
                   <Button className="bg-primary hover:bg-primary-700 text-white w-full rounded-xl shadow-md hover:shadow-lg transition-all duration-300 py-3 font-medium">
-                    Contacte-nos
+                    Contacta-nos
                   </Button>
                 </Link>
               </motion.div>
@@ -251,7 +251,7 @@ const MobileMenu = ({ isMenuOpen, setIsMenuOpen, navLinks, isActive, handleNavCl
               custom={navLinks.length + 1}
               className="mt-8 pt-6 border-t border-gray-100"
             >
-              <p className="text-sm text-gray-600 mb-4 font-medium">Siga-nos nas redes sociais</p>
+              <p className="text-sm text-gray-600 mb-4 font-medium">Segue as nossas redes sociais</p>
               <div className="flex space-x-3">
                 <a
                   href="https://instagram.com/naildesigner.cl"
@@ -287,7 +287,6 @@ const Navbar = () => {
 
   // Navigation links configuration - centralized for easier maintenance
   const navLinks = useMemo(() => [
-    { path: '/', label: 'Início' },
     { path: '/services', label: 'Serviços' },
     { path: '/gallery', label: 'Galeria' },
     { path: '/colors', label: 'Cores' },

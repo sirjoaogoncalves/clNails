@@ -37,7 +37,7 @@ const CtaSection = () => {
               </span>?
             </h2>
             <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto text-white/90">
-              Realce a sua beleza com unhas perfeitas e cheias de personalidade. Contacte-nos e marque a sua experiência exclusiva.
+              Realça a tua beleza com unhas perfeitas e cheias de personalidade. Contacta-nos e marca a tua experiência exclusiva.
             </p>
             
                        
@@ -48,7 +48,7 @@ const CtaSection = () => {
             >
               <Link to="/contact">
                 <Button className="bg-white text-primary-600 hover:bg-white/90 px-8 py-6 h-auto text-lg rounded-full shadow-xl group">
-                  <span>Contacte-nos agora</span>
+                  <span>Contacta-nos agora</span>
                 </Button>
               </Link>
               

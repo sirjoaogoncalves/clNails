@@ -13,7 +13,7 @@ const serviceCategories = [
       {
         id: 1,
         title: 'Verniz de gel',
-        description: 'Unhas com um acabamento brilhante e um toque profissional! Incluicutilagem, preparação da unha, aplicação da cor à tua escolha e finalização com top coat. Perfeito para quem gosta de unhas simples e bem cuidadas.',
+        description: 'Unhas com um acabamento brilhante e um toque profissional! Inclui cutilagem, preparação da unha, aplicação da cor à tua escolha e finalização com top coat. Perfeito para quem gosta de unhas simples e bem cuidadas.',
         price: '10',
         duration: '+- 1h',
         popular: false,
@@ -45,7 +45,7 @@ const serviceCategories = [
       {
         id: 5,
         title: 'Polygel – manutenção',
-        description: 'Serviço completo de manutenção com nivelamento e reforço da estrutura em Polygel, cutilagem, retoque ou troca de cor e finalização com top coat para restaurar o brilho e a durabilidade.Ideal para manter as unhas sempre bonitas, fortes e bem cuidadas, prolongando o efeito do alongamento ou reforço já aplicado.',
+        description: 'Serviço completo de manutenção com nivelamento e reforço da estrutura em Polygel, cutilagem, retoque ou troca de cor e finalização com top coat para restaurar o brilho e a durabilidade. Ideal para manter as unhas sempre bonitas, fortes e bem cuidadas, prolongando o efeito do alongamento ou reforço já aplicado.',
         price: '15',
         duration: '+- 2h',
         popular: false,
@@ -177,7 +177,7 @@ const ServicesPage = () => {
               <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
             </h1>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto mt-4">
-              Explore a nossa gama completa de serviços de cuidados de unhas concebidos para mimar e aperfeiçoar as suas mãos e pés.
+              Explora a nossa gama completa de serviços de cuidados de unhas concebidos para mimar e aperfeiçoar as tuas mãos e pés.
             </p>
           </motion.div>
 
@@ -294,7 +294,7 @@ const ServicesPage = () => {
                 >
                   <h3 className="font-semibold text-lg mb-3 text-primary-600">Marcações</h3>
                   <p className="text-gray-700">
-                    Recomendamos a marcação antecipada para garantir disponibilidade. Consulte a nossa política de cancelamento.
+                    Recomendamos a marcação antecipada para garantir disponibilidade. Consulta a nossa política de cancelamento.
                   </p>
                 </motion.div>
                 
@@ -304,7 +304,7 @@ const ServicesPage = () => {
                 >
                   <h3 className="font-semibold text-lg mb-3 text-primary-600">Cancelamentos</h3>
                   <p className="text-gray-700">
-                    Por favor, avise com pelo menos 24 horas de antecedência em caso de cancelamento para evitar taxas.
+                    Por favor, avisa com pelo menos 24 horas de antecedência em caso de cancelamento para evitar taxas.
                   </p>
                 </motion.div>
               </div>

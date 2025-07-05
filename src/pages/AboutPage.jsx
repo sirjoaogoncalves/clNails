@@ -184,7 +184,7 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
                   </div>
                   <h3 className="text-xl font-medium mb-2">Dedicação</h3>
                   <p className="text-gray-700">
-                    Dedicamos tempo para compreender as suas preferências e oferecer um serviço personalizado.
+                    Dedicamos tempo para compreender as tuas preferências e oferecer um serviço personalizado.
                   </p>
                 </CardContent>
               </Card>
@@ -198,7 +198,7 @@ A nossa história é feita de cada sorriso, de cada conversa partilhada, de cada
                   </div>
                   <h3 className="text-xl font-medium mb-2">Foco no cliente</h3>
                   <p className="text-gray-700">
-                    A sua satisfação é a nossa prioridade, esforçamo-nos por exceder as suas expectativas em cada visita.
+                    A tua satisfação é a nossa prioridade, esforçamo-nos por exceder as tuas expectativas em cada visita.
                   </p>
                 </CardContent>
               </Card>

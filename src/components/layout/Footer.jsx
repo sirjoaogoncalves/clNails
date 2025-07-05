@@ -119,7 +119,7 @@ const Footer = () => {
             custom={0}
           >
             <SectionCard>
-              <SectionHeader icon={Mail} title="Contacte-nos" />
+              <SectionHeader icon={Mail} title="Contacta-nos" />
 
               <div className="space-y-4">
                 <ContactInfo icon={Mail}>
@@ -160,7 +160,7 @@ const Footer = () => {
             custom={2}
           >
             <SectionCard>
-              <SectionHeader icon={Heart} title="Ligue-se connosco" />
+              <SectionHeader icon={Heart} title="Redes sociais" />
 
               {/* Social Media Links */}
               <div className="flex space-x-4">

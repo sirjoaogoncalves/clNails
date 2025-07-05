@@ -1,127 +1,37 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Button } from '../ui/button';
 import { Link } from 'react-router-dom';
-// Carousel imports - COMMENTED OUT FOR NOW
-// import {
-//   Carousel,
-//   CarouselContent,
-//   CarouselItem,
-// } from "../ui/carousel";
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { ArrowRight, Palette } from 'lucide-react';
 
-// Service images for background carousel
-const featuredServices = [
-  {
-    id: 1,
-    title: "",
-    image: "/service-classic.jpg",
-  },
-  {
-    id: 2,
-    title: "",
-    image: "/azul_quadrado_pagina_inicial.jpeg",
-  },
-  {
-    id: 3,
-    title: "",
-    image: "/lilas_pagina_inicial.jpeg",
-  },
-  {
-    id: 4,
-    title: "",
-    image: "/verde_lima_pagina_inicial.jpeg",
-  },
-  {
-    id: 5,
-    title: "",
-    image: "/IMG_6808.jpeg",
-  },
-  {
-    id: 6,
-    title: "",
-    image: "/service-gel.jpg",
-  },
-];
-
 const HeroSection = () => {
-  // Carousel state - COMMENTED OUT FOR NOW
-  // const [activeIndex, setActiveIndex] = useState(0);
-  // const [api, setApi] = useState();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
 
-  // Handle carousel API for background carousel - COMMENTED OUT FOR NOW
-  /*
-  useEffect(() => {
-    if (!api) return;
-
-    const scrollHandler = () => {
-      const slideIndex = api.selectedScrollSnap();
-      setActiveIndex(slideIndex);
-    };
-
-    api.on("select", scrollHandler);
-
-    return () => {
-      api.off("select", scrollHandler);
-    };
-  }, [api]);
-
-  // Auto-slide effect - no hover interference since users can't interact
-  useEffect(() => {
-    if (!api) return;
-
-    const interval = setInterval(() => {
-      const nextIndex = (activeIndex + 1) % featuredServices.length;
-      setActiveIndex(nextIndex);
-      api.scrollTo(nextIndex);
-    }, 4000);
-
-    return () => clearInterval(interval);
-  }, [activeIndex, api]);
-  */
-
   return (
-    <div className="relative  overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-100" ref={ref}>
-      {/* Background Carousel - Non-interactive - COMMENTED OUT FOR NOW */}
-      {/*
+    <div className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-primary-100" ref={ref}>
+
+      {/* Simple dynamic gradient background */}
       <div className="absolute inset-0 z-0">
-        <Carousel
-          className="w-full h-full"
-          opts={{
-            align: "center",
-            loop: true,
+        <motion.div
+          className="absolute inset-0 opacity-60"
+          animate={{
+            background: [
+              "radial-gradient(circle at 20% 50%, rgba(251, 246, 246, 0.4) 0%, transparent 50%), linear-gradient(45deg, rgba(247, 236, 236, 0.3) 0%, rgba(240, 220, 220, 0.2) 100%)",
+              "radial-gradient(circle at 80% 20%, rgba(240, 220, 220, 0.4) 0%, transparent 50%), linear-gradient(135deg, rgba(251, 246, 246, 0.3) 0%, rgba(247, 236, 236, 0.2) 100%)",
+              "radial-gradient(circle at 40% 80%, rgba(247, 236, 236, 0.4) 0%, transparent 50%), linear-gradient(225deg, rgba(240, 220, 220, 0.3) 0%, rgba(251, 246, 246, 0.2) 100%)",
+              "radial-gradient(circle at 60% 30%, rgba(251, 246, 246, 0.4) 0%, transparent 50%), linear-gradient(315deg, rgba(247, 236, 236, 0.3) 0%, rgba(240, 220, 220, 0.2) 100%)",
+              "radial-gradient(circle at 20% 50%, rgba(251, 246, 246, 0.4) 0%, transparent 50%), linear-gradient(45deg, rgba(247, 236, 236, 0.3) 0%, rgba(240, 220, 220, 0.2) 100%)"
+            ]
           }}
-          setApi={setApi}
-        >
-          <CarouselContent className="w-full h-full -ml-0">
-            {featuredServices.map((service, index) => (
-              <CarouselItem
-                key={service.id}
-                className="w-full flex-none pl-0 h-full"
-              >
-                <div className="relative w-full h-full">
-                  <img
-                    src={service.image}
-                    alt={`Nail art ${index + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  <div
-                    className="absolute inset-0 bg-black/40"
-                    style={{
-                      backdropFilter: 'blur(2px)',
-                      WebkitBackdropFilter: 'blur(2px)'
-                    }}
-                  />
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-        </Carousel>
+          transition={{
+            duration: 8,
+            ease: "easeInOut",
+            repeat: Infinity
+          }}
+        />
       </div>
-      */}
 
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-primary-200/30 -z-10 transform translate-x-1/2 -translate-y-1/2"></div>
@@ -146,11 +56,29 @@ const HeroSection = () => {
               className="mb-2"
             >
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
-                Descubra a nossa{' '}
+                Descobre a nossa{' '}
                 <span className="relative inline-block">
-                  <span className="relative z-10 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent">
+                  <motion.span
+                    className="relative z-10 bg-gradient-to-r from-primary-600 to-primary-800 bg-clip-text text-transparent"
+                    style={{
+                      background: "linear-gradient(90deg, #c4908f 0%, #c4908f 25%, #e6b5b4 50%, #c4908f 75%, #c4908f 100%)",
+                      backgroundSize: "400% 100%",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text"
+                    }}
+                    animate={{
+                      backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
+                    }}
+                    transition={{
+                      duration: 4,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                      delay: 1.5
+                    }}
+                  >
                     Arte
-                  </span>
+                  </motion.span>
                   <motion.span
                     className="absolute bottom-2 left-0 right-0 h-3 bg-primary-300/60 rounded-full"
                     initial={{ width: 0 }}
@@ -168,9 +96,9 @@ const HeroSection = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="text-xl md:text-2xl lg:text-3xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed font-light"
             >
-              Onde cada unha se transforma com a sua personalidade.
+              Onde cada unha se transforma com a tua personalidade.
               <br className="hidden md:block" />
-              <span> </span>Explore a criatividade e elegância em cada detalhe.
+              <span> </span>Explora a criatividade e elegância em cada detalhe.
             </motion.p>
 
             {/* Feature highlights */}
@@ -208,20 +136,10 @@ const HeroSection = () => {
             >
               <Link to="/gallery">
                 <Button
-                  className="group bg-primary hover:bg-primary-700 text-white px-8 py-6 h-auto text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-500"
+                  className="group bg-primary hover:bg-primary-700 text-white px-8 py-4 h-auto text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-500"
                 >
                   <span className="mr-2">Ver galeria</span>
                   <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
-              </Link>
-
-              <Link to="/colors">
-                <Button
-                  variant="outline"
-                  className="bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white backdrop-blur-sm px-8 py-6 h-auto text-lg rounded-full transition-all duration-500 shadow-md hover:shadow-lg"
-                >
-                  <Palette className="h-5 w-5 mr-2" />
-                  Explorar cores
                 </Button>
               </Link>
             </motion.div>
@@ -231,7 +149,7 @@ const HeroSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: isInView ? 1 : 0 }}
               transition={{ duration: 1, delay: 1.5 }}
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+              className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
             >
               <motion.div
                 animate={{ y: [0, 8, 0] }}

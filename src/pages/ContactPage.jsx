@@ -238,11 +238,11 @@ const ContactPage = () => {
           className="text-center mb-16 lg:mb-20"
         >
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-gray-900 relative inline-block">
-            Contacte-nos
+            Contacta-nos
             <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
           </h1>
           <p className="mt-6 text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            Estamos disponíveis para responder às suas questões e ajudá-la a agendar o seu serviço.
+            Estamos disponíveis para responder às tuas questões e ajudar-te a agendar o teu serviço.
           </p>
         </motion.div>
 
@@ -292,10 +292,10 @@ const ContactPage = () => {
         >
           <motion.div variants={fadeIn} className="text-center mb-10">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-              Siga-nos nas redes sociais
+              Segue-nos nas redes sociais
             </h2>
             <p className="text-gray-700 lg:text-lg">
-              Acompanhe o nosso trabalho e inspire-se com as nossas criações
+              Acompanha o nosso trabalho e inspira-te com as nossas criações
             </p>
           </motion.div>
 
@@ -304,14 +304,14 @@ const ContactPage = () => {
               icon={Instagram}
               href="https://instagram.com/naildesigner.cl"
               platform="Instagram"
-              description="Veja as nossas últimas criações e inspirações"
+              description="Vê as nossas últimas criações e inspirações"
             />
 
             <SocialMediaCard
               icon={Facebook}
               href="https://www.facebook.com/profile.php?id=61572996493192"
               platform="Facebook"
-              description="Fique por dentro das novidades e promoções"
+              description="Fica por dentro das novidades"
             />
           </div>
         </motion.div>

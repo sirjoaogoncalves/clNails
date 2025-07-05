@@ -305,7 +305,7 @@ const ColorPalettePage = () => {
             <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
           </h1>
           <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto mt-4 px-4">
-            Descubra a nossa vasta gama de cores de verniz. Toque numa cor para ver como fica nas unhas.
+            Descobre a nossa vasta gama de cores de verniz.
           </p>
         </motion.div>
 
@@ -323,12 +323,12 @@ const ColorPalettePage = () => {
                 <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-3 rounded-full">
                   <Palette className="text-white h-5 w-5" />
                 </div>
-                <h2 className="text-xl font-bold text-gray-900">Escolha uma família de cores</h2>
+                <h2 className="text-xl font-bold text-gray-900">Escolhe uma família de cores</h2>
               </div>
 
               <Select value={activeCategory} onValueChange={setActiveCategory}>
                 <SelectTrigger className="w-full h-14 border-2 border-primary-200 rounded-2xl bg-gradient-to-r from-primary-50 to-white hover:from-primary-100 hover:to-primary-50 transition-all duration-200 text-lg font-medium shadow-lg">
-                  <SelectValue placeholder="Toque para escolher uma família de cores..." />
+                  <SelectValue placeholder="Toca para escolher uma família de cores..." />
                 </SelectTrigger>
                 <SelectContent className="max-h-60 bg-white border-2 border-primary-200 shadow-2xl rounded-2xl">
                   {categories.map((category) => (
@@ -357,7 +357,7 @@ const ColorPalettePage = () => {
                 <div className="bg-gradient-to-br from-primary-500 to-primary-600 p-2 rounded-full">
                   <Palette className="text-white h-4 w-4" />
                 </div>
-                <h2 className="text-lg font-semibold text-gray-900">Escolha uma família de cores</h2>
+                <h2 className="text-lg font-semibold text-gray-900">Escolhe uma família de cores</h2>
               </div>
 
               <div className="flex flex-wrap justify-center gap-3">
@@ -556,10 +556,10 @@ const ColorPalettePage = () => {
                 <Palette className="w-10 h-10 md:w-12 md:h-12 text-primary-700" />
               </motion.div>
               <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Descubra a nossa paleta
+                Descobre a nossa paleta
               </h3>
               <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                Escolha uma família de cores acima para explorar todas as nossas opções e encontrar a cor perfeita para si.
+                Escolhe uma família de cores acima para explorar todas as nossas opções e encontrar a cor perfeita para ti.
               </p>
               <div className="flex justify-center">
                 <motion.div

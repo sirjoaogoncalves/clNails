@@ -194,7 +194,7 @@ const ColorPaletteTeaser = () => {
             <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto mt-6">
-            Descubra as 5 cores mais populares do momento. De térmicos únicos a clássicos vibrantes.
+            Descobre as 5 cores mais populares do momento. De térmicos únicos a clássicos vibrantes.
           </p>
         </motion.div>
 

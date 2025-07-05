@@ -189,7 +189,7 @@ const GallerySpotlight = () => {
             <span className="absolute -bottom-2 left-0 right-0 h-2 bg-primary-200 rounded-full z-0 transform -rotate-1"></span>
           </h2>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto mt-6">
-            Descubra algumas das nossas obras mais recentes. Cada unha conta uma história única com personalidade e elegância.
+            Descobre algumas das nossas obras mais recentes. Cada unha conta uma história única com personalidade e elegância.
           </p>
         </motion.div>
 
