@@ -176,9 +176,8 @@ const ColorModal = ({ color, isOpen, onClose }) => {
         <button
           className="absolute top-4 right-4 z-20 bg-white/90 backdrop-blur-sm text-gray-800 rounded-full p-3 hover:bg-white transition-all duration-200 shadow-lg hover:scale-110"
           onClick={onClose}
-          aria-label="Fechar modal de detalhes da cor"
         >
-          <X size={20} aria-hidden="true" />
+          <X size={20} />
         </button>
 
         {/* Color Preview */}
@@ -373,7 +372,6 @@ const ColorPalettePage = () => {
                         ? 'bg-gradient-to-r from-primary-500 to-primary-600 text-white shadow-primary-200'
                         : 'bg-white text-gray-700 hover:bg-primary-50 hover:text-primary-700 border border-primary-200'
                     }`}
-                    aria-label={`Selecionar categoria ${category}`}
                   >
                     {category}
                     <span className="ml-2 bg-white/20 text-xs px-2 py-1 rounded-full">
@@ -452,15 +450,6 @@ const ColorPalettePage = () => {
                     key={color.id}
                     onClick={() => openModal(color)}
                     className="cursor-pointer group"
-                    role="button"
-                    tabIndex={0}
-                    aria-label={`Ver detalhes da cor ${color.name}, número ${color.number}`}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        openModal(color);
-                      }
-                    }}
                   >
                     <Card className="overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-0 bg-white relative rounded-2xl">
                       <div className="aspect-square p-3">

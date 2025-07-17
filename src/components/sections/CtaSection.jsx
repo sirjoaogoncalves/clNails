@@ -47,7 +47,7 @@ const CtaSection = () => {
               transition={{ duration: 0.5, delay: 0.8 }}
             >
               <Link to="/contact">
-                <Button className="bg-white text-primary-600 hover:bg-white/90 px-8 py-6 h-auto text-lg rounded-full shadow-xl group" aria-label="Contactar para marcar appointment">
+                <Button className="bg-white text-primary-600 hover:bg-white/90 px-8 py-6 h-auto text-lg rounded-full shadow-xl group">
                   <span>Contacta-nos agora</span>
                 </Button>
               </Link>
