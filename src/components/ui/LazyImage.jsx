@@ -9,6 +9,7 @@ const LazyImage = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [hasError, setHasError] = useState(false);
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -19,7 +20,7 @@ const LazyImage = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '50px' }
     );
 
     if (imgRef.current) {
@@ -31,23 +32,32 @@ const LazyImage = ({
 
   const handleLoad = () => {
     setIsLoaded(true);
+    setHasError(false);
+  };
+
+  const handleError = () => {
+    setHasError(true);
+    setIsLoaded(false);
   };
 
   return (
     <div ref={imgRef} className={`relative ${className}`}>
-      {!isLoaded && (
-        <img
-          src={placeholder}
-          alt=""
-          className="absolute inset-0 w-full h-full object-cover blur-sm"
-          style={{ filter: 'blur(5px)' }}
-        />
+      {!isLoaded && !hasError && (
+        <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Loading...</div>
+        </div>
       )}
-      {isInView && (
+      {hasError && (
+        <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+          <div className="text-gray-400 text-sm">Image unavailable</div>
+        </div>
+      )}
+      {isInView && !hasError && (
         <img
           src={src}
           alt={alt}
           onLoad={handleLoad}
+          onError={handleError}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}

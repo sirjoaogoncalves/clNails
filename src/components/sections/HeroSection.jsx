@@ -64,8 +64,7 @@ const HeroSection = () => {
                       background: "linear-gradient(90deg, #c4908f 0%, #c4908f 25%, #e6b5b4 50%, #c4908f 75%, #c4908f 100%)",
                       backgroundSize: "400% 100%",
                       WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      backgroundClip: "text"
+                      WebkitTextFillColor: "transparent"
                     }}
                     animate={{
                       backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]

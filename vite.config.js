@@ -34,7 +34,8 @@ export default defineConfig({
         }
       }
     },
-    minify: 'esbuild'
+    minify: 'esbuild',
+    sourcemap: false
   },
   resolve: {
     alias: {
