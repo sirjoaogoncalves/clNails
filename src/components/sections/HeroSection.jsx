@@ -137,9 +137,10 @@ const HeroSection = () => {
               <Link to="/gallery">
                 <Button
                   className="group bg-primary hover:bg-primary-700 text-white px-8 py-4 h-auto text-lg rounded-full shadow-lg hover:shadow-xl transition-all duration-500"
+                  aria-label="Ver galeria de trabalhos realizados"
                 >
                   <span className="mr-2">Ver galeria</span>
-                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+                  <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
                 </Button>
               </Link>
             </motion.div>

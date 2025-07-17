@@ -2,19 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import './index.css';
-import { setupPlaceholders } from './utils/setupPlaceholders.js';
-import { SpeedInsights } from '@vercel/speed-insights/react';
-import { Analytics } from '@vercel/analytics/react';
 
-// Set up placeholders for development
+const SpeedInsights = React.lazy(() => import('@vercel/speed-insights/react').then(module => ({ default: module.SpeedInsights })));
+const Analytics = React.lazy(() => import('@vercel/analytics/react').then(module => ({ default: module.Analytics })));
+
 if (import.meta.env.DEV) {
-  window.addEventListener('load', setupPlaceholders);
+  import('./utils/setupPlaceholders.js').then(({ setupPlaceholders }) => {
+    window.addEventListener('load', setupPlaceholders);
+  });
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    <SpeedInsights />
-    <Analytics />
+    <React.Suspense fallback={null}>
+      <SpeedInsights />
+      <Analytics />
+    </React.Suspense>
   </React.StrictMode>,
 );

@@ -8,21 +8,33 @@ export default defineConfig({
     react(),
     ViteImageOptimizer({
       png: {
-        quality: 80,
+        quality: 75,
       },
       jpeg: {
-        quality: 80,
+        quality: 75,
       },
       jpg: {
-        quality: 80,
+        quality: 75,
       },
       webp: {
-        quality: 80,
+        quality: 75,
       },
     }),
   ],
   build: {
-    assetsInlineLimit: 0, // Prevent inlining, force file generation
+    assetsInlineLimit: 4096,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-avatar', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-label', '@radix-ui/react-navigation-menu', '@radix-ui/react-select', '@radix-ui/react-separator', '@radix-ui/react-slot', '@radix-ui/react-tabs'],
+          animation: ['framer-motion'],
+          carousel: ['embla-carousel-react']
+        }
+      }
+    },
+    minify: 'esbuild'
   },
   resolve: {
     alias: {

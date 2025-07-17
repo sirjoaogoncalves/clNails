@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: *
+Disallow: /api/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /dist/build/
+
+Sitemap: https://cl-designer.vercel.app/sitemap.xml
